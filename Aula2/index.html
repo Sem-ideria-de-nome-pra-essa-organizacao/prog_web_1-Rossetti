@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula2</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend><strong>Formulário de matricula do curso</strong></legend>
+            <legend for="first-name-input">Digite o primeiro nome</legend>
+            <input id="first-name-input" type="text" name="">
+            <legend for="second-name-input">Digite o segundo nome</legend>
+            <input id="second-name-input" type=" text" name="">
+            <br>
+            <br>
+            <br>
+            <strong>Curso:</strong><br>
+            <input type="radio" name="course" id="course1">
+            <label id="course1-label" for="course1">Técnico em Informática</label><br>
+            <input type="radio" name="course" id="course2">
+            <label id="course2-label" for="course2">Graduação - Analise e desenvolvimento de sistemas</label><br>
+            <input type="radio" name="course" id="course3">
+            <label id="course3-label" for="course3">Profissionalizante - Programação web</label>
+            <br>
+            <br>
+            <br>
+            <strong>Curso:</strong><br>
+            <input type="checkbox" name="course" id="language1">
+            <label for="language1">PHP</label><br>
+            <input type="checkbox" name="course" id="language2">
+            <label for="language2">JAVA</label><br>
+            <input type="checkbox" name="course" id="language3">
+            <label for="language3">Python</label>
+            <br>
+            <br>
+            <br>
+            <select name="period" id="period">
+                <option value="mat">Manhã</option>
+                <option value="tar">Tarde</option>
+                <option value="noi">Noite</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <input list="campus" id="campus-input" />
+            <datalist id="campus">
+                <option value="Chapecó">Chapecó</option>
+                <option value="São Carlos">São Carlos</option>
+                <option value="Caçador">Caçador</option>
+                <option value="Xânxere">Xânxere</option>
+                <option value="Florianopolis">Florianopolis</option>
+            </datalist>
+            <br>
+            <br>
+
+            <button id="submit" type="button">Enviar</button>
+        </fieldset>
+    </form>
+    <script>
+        document.getElementById("submit").addEventListener("click", (evt) => form(evt))
+        const form = (evt) => {
+            const fName = document.getElementById("first-name-input").value
+            const sName = document.getElementById("second-name-input").value
+            const ratio = document.getElementsByName("course")
+            const php = document.getElementById("language1").value
+            const java = document.getElementById("language2").value
+            const python = document.getElementById("language3").value
+            const period = document.getElementById("period").value
+            const campusInput = document.getElementById("campus-input").value
+            console.log(fName, sName, ratio, php, java, python, period, campusInput)
+        }
+    </script>
+</body>
+
+</html>
