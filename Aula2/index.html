@@ -63,15 +63,28 @@
     <script>
         document.getElementById("submit").addEventListener("click", (evt) => form(evt))
         const form = (evt) => {
-            const fName = document.getElementById("first-name-input").value
-            const sName = document.getElementById("second-name-input").value
-            const ratio = document.getElementsByName("course")
-            const php = document.getElementById("language1").value
-            const java = document.getElementById("language2").value
-            const python = document.getElementById("language3").value
-            const period = document.getElementById("period").value
-            const campusInput = document.getElementById("campus-input").value
-            console.log(fName, sName, ratio, php, java, python, period, campusInput)
+            const primeiroNome = document.querySelector('input[id="first-name-input"]').value;
+            const segundoNome = document.querySelector('input[id="second-name-input"]').value;
+
+            const curso = document.querySelector('input[name="course"]:checked').value;
+
+            let linguagens = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach((checkbox) => {
+                linguagens.push(checkbox.nextElementSibling.textContent);
+            });
+
+            const turno = document.querySelector('#period').value;
+
+            const unidade = document.querySelector('#campus-input').value;
+
+            // Monta a mensagem de alerta
+            let mensagem = `Nome: ${primeiroNome} ${segundoNome}\n`;
+            mensagem += `Curso: ${curso}\n`;
+            mensagem += `Linguagens de preferência: ${linguagens.join(', ')}\n`;
+            mensagem += `Turno: ${turno}\n`;
+            mensagem += `Unidade: ${unidade}`;
+
+            alert(mensagem);
         }
     </script>
 </body>
