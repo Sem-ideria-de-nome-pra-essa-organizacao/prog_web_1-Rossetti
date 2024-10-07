@@ -1,0 +1,20 @@
+body {
+    background-color: rgba(138, 138, 138, 0.563);
+}
+
+h4 {
+    color: rgb(255, 0, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+p {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px outset rgb(233, 247, 247);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+}       
