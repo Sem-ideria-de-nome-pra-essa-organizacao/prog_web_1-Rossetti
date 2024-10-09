@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -66,8 +66,8 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
+    <div class="container mt-8 mb-5">
+        <div class="row mt-5">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row  mt-5">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -168,8 +168,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <table class="table">
+        <div class="row  mt-5 ">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -199,6 +199,20 @@
                 </tbody>
             </table>
         </div>
+        <form action="get">
+            <div class="row mt-5 ">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-success " type="submit">Enviar</button>
+        </form>
     </div>
 </body>
 
