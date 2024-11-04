@@ -16,14 +16,54 @@
         echo"<br> de maior <br>";
     }
     else{
-        echo"<br> de menor";
+        echo"<br> de menor <br>";
     }
 
     $pessoas = [
         "Ana", "Chaves", "Kiko" ];
 
     for($i = 0; $i < count($pessoas); $i++){
-        echo $pessoas[$i];
+        echo "$pessoas[$i] <br>";
+    }
+
+    $idades = [
+        18, 75, 65, 6, 5, 90
+    ];
+
+    for($i=0; $i < count($idades); $i++){
+
+        if($idade >= 18){
+            echo "<br> $idade de maior <br>";
+        }
+
+        else{
+            echo "<br> $idade de menor <br>";
+        }
+    };
+
+    $opcao = "/";
+    $num1 = 3;
+    $num2 = 2;
+    
+
+    switch ($opcao) {
+        case '/':
+            echo "<br> divisão: ".$num1 / $num2;
+            break;
+        
+        case '*':
+            echo "<br> multiplicação: ".$num1 * $num2;
+            break;
+
+        case '+':
+            echo "<br> adição: ".$num1 + $num2; 
+            break;
+        case '-':
+            echo "<br> subtração: ".$num1 - $num2;
+                
+        default:
+            echo "deu B.O.";
+            break;
     }
     ?>
 </body>
