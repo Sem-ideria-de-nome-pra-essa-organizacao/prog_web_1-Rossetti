@@ -48,18 +48,18 @@
 
     switch ($opcao) {
         case '/':
-            echo "<br> divisão: ".$num1 / $num2;
+            echo "<br> divisão: ".($num1 / $num2);
             break;
         
         case '*':
-            echo "<br> multiplicação: ".$num1 * $num2;
+            echo "<br> multiplicação: ".($num1 * $num2);
             break;
 
         case '+':
-            echo "<br> adição: ".$num1 + $num2; 
+            echo "<br> adição: ".($num1 + $num2); 
             break;
         case '-':
-            echo "<br> subtração: ".$num1 - $num2;
+            echo "<br> subtração: ".($num1 - $num2);
                 
         default:
             echo "deu B.O.";
